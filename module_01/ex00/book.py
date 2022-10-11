@@ -4,8 +4,7 @@ class Book:
     def __init__(self,name):
         err_return=["name"]
         def input_error(err_code):
-            print("error: corrupted book setup value: "+err_return[err_code]+".")
-            exit()
+            raise ValueError("error: corrupted book setup value: "+err_return[err_code]+".")
         self.name=name if isinstance(name,str)and name.isalpha()else input_error(0)
         self.creation_date=datetime.now()
         self.last_update=datetime.now()

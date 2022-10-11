@@ -1,9 +1,11 @@
+from multiprocessing.sharedctypes import Value
+
+
 class GotCharacter:
     def __init__(self,first_name,is_alive):
         def input_error(err_code):
             if err_code==0:
-                print("erorr: corrupted first_name provided.")
-                exit()
+                raise ValueError("erorr: corrupted first_name provided.")
             else:
                 print("error: corrupted is_alive provided, set to default(True).")
                 self.is_alive=True
