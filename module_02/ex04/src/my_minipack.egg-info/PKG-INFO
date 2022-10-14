@@ -1,0 +1,18 @@
+Metadata-Version: 2.1
+Name: my-minipack
+Version: 1.0.0
+Summary: A small example package
+Author: glaverdu
+Author-email: glaverdu@student.42.fr
+License: MIT
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Students
+Classifier: Topic :: Education
+Classifier: Topic :: HowTo
+Classifier: Topic :: PackageProgramming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: MacOS :: MacOS X
+Requires-Python: >=3.7
+Description-Content-Type: text/markdown
+License-File: LICENSE.txt

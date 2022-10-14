@@ -1,4 +1,3 @@
-from time import sleep
 import time
 import sys
 
@@ -17,11 +16,3 @@ def ft_progress(lst):
         sys.stdout.write(f"ETA: {eta:5}s [{round(ih/toolbar_width * 100,2):5}] [{'='*int(ih/2):50}] {ih:3}/{toolbar_width}  |  elapsed time {round(time.time()-start,2):5}s")
         sys.stdout.flush()
         yield i
-
-listy = range(50)
-ret = 0
-for elem in ft_progress(listy):
-    ret += (elem + 3) % 5
-    sleep(0.1)
-print()
-print(ret)
