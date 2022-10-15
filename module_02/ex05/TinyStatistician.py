@@ -1,4 +1,6 @@
 from math import sqrt
+from os import stat
+from turtle import st
 
 class TinyStatistician():
     @staticmethod
@@ -19,8 +21,8 @@ class TinyStatistician():
             return float(x[len(x)//2]) if len(x)%2!=0 else float((x[len(x)//2]+x[len(x)//2-1])/2)
         except Exception:
             raise TypeError('x should be a non-empty int/float list or array.')
-
-    def quartile(self,x):
+    @staticmethod
+    def quartile(x):
         if not len(x):
             return None
         try:
@@ -28,27 +30,28 @@ class TinyStatistician():
             q1list = []
             q2list = []
             for i in x:
-                if i<self.median(x):
+                if i<TinyStatistician.median(x):
                     q1list.append(i)
-                elif i>self.median(x):
+                elif i>TinyStatistician.median(x):
                     q2list.append(i)
-            return (self.median(q1list),self.median(q2list))
+            return (TinyStatistician.median(q1list),TinyStatistician.median(q2list))
         except Exception:
             raise TypeError('x should be a non-empty int/float list or array.')
-    def var(self,x):
+    @staticmethod
+    def var(x):
         if not len(x):
                 return None
         try:
-            mean=self.mean(x)
+            mean=TinyStatistician.mean(x)
             return(float((sum(map(lambda x: (x-mean)*(x-mean),x)))/len(x)))
         except Exception:
             raise TypeError('x should be a non-empty int/float list or array.')
-
-    def std(self,x):
+    @staticmethod
+    def std(x):
         if not len(x):
                 return None
         try:
-            return float(sqrt(self.var(x)))
+            return float(sqrt(TinyStatistician.var(x)))
         except Exception:
             raise TypeError('x should be a non-empty int/float list or array.')
 
