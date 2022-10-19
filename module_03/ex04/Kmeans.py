@@ -35,7 +35,6 @@ class KmeansClustering:
                 index=closest==i
                 clusters.append(X[index])
             for i,cluster in enumerate(clusters):
-                print(cluster)
                 self.centroids[i]=cluster.mean(axis=0)
                 break
             break
