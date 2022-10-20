@@ -36,8 +36,6 @@ class KmeansClustering:
                 clusters.append(X[index])
             for i,cluster in enumerate(clusters):
                 self.centroids[i]=cluster.mean(axis=0)
-                break
-            break
         self.clusters=clusters
         self.trained=True
 
