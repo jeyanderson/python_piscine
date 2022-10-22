@@ -1,1 +1,1 @@
-python discovery piscine
+python machine learning discovery piscine.
